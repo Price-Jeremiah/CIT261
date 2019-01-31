@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="snow"></p>
+    <script>
+        //I borrowed some of this code, found this online...
+        var christmas = {
+            month: 11,
+            date: 25
+        }
+
+        function isItChristmas() {
+            var now = new Date();
+            return (now.getMonth() == christmas.month && now.getDate() == christmas.date);
+        }
+
+        if (isItChristmas()) {
+            document.getElementById("snow").innerHTML = "It is Christmas!";
+        } else {
+            document.getElementById("snow").innerHTML =
+                "It is not Christmas...";
+        }
+
+
+    </script>
+</body>
+<body>
+    <script>
+        //Calculate Tip
+        function calculateTip() {
+            var billAmt = document.getElementById("billamt").value;
+            var serviceQual = document.getElementById("serviceQual").value;
+            var numOfPeople = document.getElementById("peopleamt").value;
+
+            //validate input
+            if (billAmt === "" || serviceQual == 0) {
+                alert("Please enter values");
+                return;
+            }
+            //Check to see if this input is empty or less than or equal to 1
+            if (numOfPeople === "" || numOfPeople <= 1) {
+                numOfPeople = 1;
+                document.getElementById("each").style.display = "none";
+            } else {
+                document.getElementById("each").style.display = "block";
+            }
+
+            //Calculate tip
+            var total = (billAmt * serviceQual) / numOfPeople;
+            //round to two decimal places
+            total = Math.round(total * 100) / 100;
+            //next line allows us to always have two digits after decimal point
+            total = total.toFixed(2);
+            //Display the tip
+            document.getElementById("totalTip").style.display = "block";
+            document.getElementById("tip").innerHTML = total;
+
+        }
+
+        //Hide the tip amount on load
+        document.getElementById("totalTip").style.display = "none";
+        document.getElementById("each").style.display = "none";
+
+        //click to call function
+        document.getElementById("calculate").onclick = function () {
+            calculateTip();
+
+        };
+    </script>
+
+    <script>
+        var tenPerBtn = document.querySelector('.tenPercent');
+        var fifteenPerBtn = document.querySelector('.fifteenPercent');
+        var twentyPerBtn = document.querySelector('.twentyPercent');
+        var customPerBtn = document.querySelector('.customTipBtn');
+        var bill = document.getElementById('billInput');
+        var tipSuggestion = document.getElementById('tipAmount');
+
+
+        function calcTen() {
+            var billInput = bill.value;
+            var tipAmount = billInput * .1;
+            tipSuggestion.innerHTML = 'A ten percent tip would equal $' + tipAmount;
+        }
+
+        function calcFifteen() {
+            var billInput = bill.value;
+            var tipAmount = billInput * .15;
+            tipSuggestion.innerHTML = 'A fifteen percent tip would equal $' + tipAmount;
+        }
+
+        function calcTwenty() {
+            var billInput = bill.value;
+            var tipAmount = billInput * .2;
+            tipSuggestion.innerHTML = 'A twenty percent tip would equal $' + tipAmount;
+        }
+
+        function calcCustom() {
+            var billInput = bill.value;
+            var customTipAmount = document.querySelector('#customTip').value;
+            var tipAmount = billInput * customTipAmount;
+            tipSuggestion.innerHTML = 'A ' + customTipAmount + ' percent tip would equal $' + tipAmount;
+        }
+
+        tenPerBtn.addEventListener('click', calcTen)
+        fifteenPerBtn.addEventListener('click', calcFifteen)
+        twentyPerBtn.addEventListener('click', calcTwenty)
+        customPerBtn.addEventListener('click', calcCustom)
+    </script>
+    
+</body>
+</html>

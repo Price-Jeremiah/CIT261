@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Examples of Loops</title>
+</head>
+<body>
+    <h1>"Conditional Statements"</h1> <br />
+    <h2>Example1</h2>
+    <p>This will ask you for your age, and will tell you if you can vote!</p>
+
+    <button onclick="myElse1()">Try it</button>
+
+    <p id="demo"></p>
+    <script>
+        function myElse1() {
+            var person = prompt("Please enter your age", "45");
+            if (person <= 17) {
+                document.getElementById("demo").innerHTML =
+                    "You are " + person + " , can't wait to vote?"
+
+            }
+            else {
+                document.getElementById("demo").innerHTML =
+                    "You are " + person + " , make sure to pick a good president!"
+            }
+
+
+        }
+    </script>
+
+    <h2>Example2</h2>
+    <p>This one will ask you for the date. And will tell you if it's Christmas!</p>
+    <p>Date Format Must Be: yyyy/mm/dd</p>
+
+    <button onclick="myElse2()">Try it</button>
+    <input type="date" id="myDate" value="2014-02-09">
+    <p id="demo1"></p>
+    <script>
+        function myElse2() {
+            var day = document.getElementById("myDate").value;
+            if (day != 2019 - 12 - 25) {
+                document.getElementById("demo1").innerHTML =
+                    "It is not Christmas :("
+            }
+            else {
+                document.getElementById("demo1").innerHTML = 
+                    "It is so Christmas! Happy Holidays!!!!"
+            }
+
+
+            }
+    </script>
+
+</body>
+<body>
+    <h1>"Functions"</h1>
+
+
+</body>
+
+<body>
+    <h1>"Loops?"</h1>
+</body>
+</html>
