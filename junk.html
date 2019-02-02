@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        title {
+            color: black;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title> Mobile Development CIT261! </title>
+    <h1 style="font-family:Verdana" ;> Week 1: </h1>
+    <h2>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays and Associative Arrays.</h2>
+
+
+</head>
+<body>
+    <style>
+        body {
+            background-color: ghostwhite;
+        }
+
+        h1 {
+            color: darkslategrey;
+        }
+
+        p {
+            color: black;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px;
+           
+        }
+    </style>
+    <h1>Variables:</h1>
+    <p>Variables are simply containers for storing data: </p>
+    <p1>
+        var x = 10; <br />
+        var y = 11;<br />
+        var z = x + y;<br />
+        <br />
+
+        In this example, the "var" indicates to the code that the letter next to it will be an assigned value.<br /><br />
+        "variable" "x" is now "10"<br />
+        "variable" "y" is now "11"<br /> <br />
+        We can now use these variables to set parameters and make loops, statements, and functions.
+
+        Another example:<br /><br />
+
+        var price1 = 55; <br />
+        var price2 = 500;<br />
+        var price3 = 35;<br />
+        var total = price1 + price2 + price3;<br /><br />
+
+
+        <p1>Exmple:</p1> <br /><br />
+        <pre>
+        function variables() { 
+        var a = 1;
+        var b = 3; 
+        var c = 5; 
+
+        var total = a + b + c;
+
+        document.getElementById("demo").innerHTML = (total);
+        }
+        <br /><br />
+
+        <button type="button" onclick="variables()">Click</button> <br />
+
+        Answer is: 
+        <pre id="demo">
+            Answer!
+        </pre>
+ 
+    </pre>
+
+
+        <script>
+            function variables() {
+
+                var a = 1;
+                var b = 3;
+                var c = 5;
+
+                var total = a + b + c;
+                document.getElementById("demo").innerHTML = (total);
+
+            }
+        </script>
+
+    </p1>
+    <h1>Conditional Statements:</h1>
+    <pr>
+        Are simple statements involved in the condition of something, such as "if", "else", "else if" or "switch". <br />
+        "If" this were to happpen, "then" this must happen...<br /><br />
+
+        if (condition) { <br /><br />
+        //block of instruction <br /><br />
+        }
+
+    </pr>
+    <pre>
+    Examples:
+
+        if (month < 10) { 
+
+        greeting = "It is a cold day!"
+          
+        }
+</pre>
+    <h1>Functions:</h1>
+    <p>
+        <script>
+
+            function tipTime() {
+                var initialcost = prompt("Enter Initial Amount: $");
+                var tip = prompt("Enter the tip amount you want to pay: $")
+
+            }
+
+        </script>
+        <script>
+            function myFunction() {
+                var text;
+                var favDrink = prompt("What's your favorite color? Blue");
+                switch (favDrink) {
+                    case "Red":
+                        text = "Just like Clifford the giant dog?";
+                        break;
+                    case "Blue":
+                        text = "Is it the color of your eyes?";
+                        break;
+                    case "Green":
+                        text = "Green? Like the color of trees in the spring?";
+                        break;
+                    case "Black":
+                        text = "Wow, are you gothic?";
+                    case "White":
+                        text = "Is it because you like the snow?"
+
+                    default:
+                        text = "I have never heard of that one..";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </p>
+
+    <h1>Parameters</h1>
+    <p>
+
+
+    </p>
+
+
+
+    <h1>Loops:</h1>
+    <p>
+        Are functions that work in a continuous stream without end,
+        which can usually break code if a parameter is out of place, causing
+        it to loop for eternity.
+    </p>
+    <h2>Loop Examples:</h2>
+    <p>
+
+    </p>
+
+</body>
+</html>
