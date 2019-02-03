@@ -1,1 +1,60 @@
-//javascriptobjects1.html
+//javascriptobjects1.html/8\
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta charset="utf-8" />
+  
+    <center><title>Javascript Objects</title></center>
+      <center><h1>Javascript Objects</center>
+    <center><p>
+    	<a href="./index.html"><b>Home</b></a> | <a href="./javascript1.html">Javascript</a> | <a href="./javascriptobjects1.html">Javascript Objects</a> | <a href="./jsonstuff.html">JSON</a> | <a href="./ajaxstuff.html">AJAX</a> | <a href="./localstorage.html">Local Storage</a> | <a href="./dom1.html">DOM</a> | <a href="./cssclassproperties.html">CSS CLass Properties</a> | <a href="./csstransitions_animations.html">CSS3 Transitions and Animations</a> | <a href="./javascriptevents.html">Javascript Events</a> | <a href="./html5tags.html">HTML5 Tags</a>
+    </p>
+</center>
+<body>
+	<center>
+	<h1>Javascript Object Creation Function</h1>
+	<h2>Three methods: Literal, New, and Construct</h2>
+	<h3>Literal</h3>
+	<pre>
+		p id="demo"></p>
+		var person = {firstName:"Jack", lastName:"Micheal", age:55, eyeColor:"brown", dancestyle:"fire"};
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+	</pre>
+	<h3>New</h3>
+	<pre>
+		p id="demo"></p>
+		var person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue"; 
+person.dancestyle = "fire";
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</pre>
+<h3>Construct</h3>
+<pre>
+
+function Person(first, last, age, eye, dancestyle) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.dance = dancestyle;
+}
+
+// Create a Person object
+var myFather = new Person("John", "Doe", 50, "blue", "fire");
+
+// Display age
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.age + "."; 
+
+</pre>
+
+</center>
+</body>
